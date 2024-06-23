@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.0" />
+        app:layout_constraintGuide_percent="0.04" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
@@ -174,19 +174,19 @@
         app:layout_constraintStart_toStartOf="@+id/day"
         app:layout_constraintTop_toBottomOf="@+id/day" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.9" />
+<!--    <androidx.constraintlayout.widget.Guideline-->
+<!--        android:id="@+id/guideline7"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        app:layout_constraintGuide_percent="0.9" />-->
 
     <FrameLayout
         android:id="@+id/frameLayout"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/iconback"
-        app:layout_constraintBottom_toTopOf="@+id/guideline7"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="@+id/guideline6">
@@ -200,6 +200,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
+                android:padding="20dp"
+                app:flow_verticalGap="10dp"
+                app:flow_horizontalGap="10dp"
+
                 app:constraint_referenced_ids="linearLayout1,linearLayout2,linearLayout3,linearLayout4,linearLayout5,linearLayout6"
                 app:flow_maxElementsWrap="3"
                 app:flow_wrapMode="chain"
@@ -211,12 +215,12 @@
             <LinearLayout
 
                 android:id="@+id/linearLayout1"
-                android:layout_width="wrap_content"
-                android:padding="@dimen/_1sdp"
-                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
                 android:background="@drawable/iconback"
                 android:gravity="center_vertical"
                 android:orientation="vertical"
+                android:padding="@dimen/_1sdp"
                 app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
                 app:layout_constraintEnd_toStartOf="@+id/linearLayout2"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -253,12 +257,12 @@
             <LinearLayout
 
                 android:id="@+id/linearLayout2"
-                android:padding="@dimen/_1sdp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
                 android:background="@drawable/iconback"
                 android:gravity="center_vertical"
                 android:orientation="vertical"
+                android:padding="@dimen/_1sdp"
                 app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
                 app:layout_constraintEnd_toStartOf="@+id/linearLayout3"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -295,12 +299,12 @@
             <LinearLayout
 
                 android:id="@+id/linearLayout3"
-                android:layout_width="wrap_content"
-                android:padding="@dimen/_1sdp"
-                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
                 android:background="@drawable/iconback"
                 android:gravity="center"
                 android:orientation="vertical"
+                android:padding="@dimen/_1sdp"
                 app:layout_constraintBottom_toTopOf="@+id/linearLayout6"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -339,12 +343,12 @@
 
                 android:id="@+id/linearLayout4"
 
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
                 android:background="@drawable/iconback"
-                android:padding="@dimen/_1sdp"
                 android:gravity="center"
                 android:orientation="vertical"
+                android:padding="@dimen/_1sdp"
                 app:layout_constraintBottom_toTopOf="@+id/flow2"
                 app:layout_constraintEnd_toStartOf="@+id/linearLayout5"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -382,12 +386,12 @@
             <LinearLayout
 
                 android:id="@+id/linearLayout5"
-                android:layout_width="wrap_content"
-                android:padding="@dimen/_1sdp"
-                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
                 android:background="@drawable/iconback"
                 android:gravity="center"
                 android:orientation="vertical"
+                android:padding="@dimen/_1sdp"
                 app:layout_constraintBottom_toTopOf="@+id/flow2"
                 app:layout_constraintEnd_toStartOf="@+id/linearLayout6"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -425,12 +429,12 @@
             <LinearLayout
 
                 android:id="@+id/linearLayout6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="@dimen/_1sdp"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
                 android:background="@drawable/iconback"
                 android:gravity="center"
                 android:orientation="vertical"
+                android:padding="@dimen/_1sdp"
                 app:layout_constraintBottom_toTopOf="@+id/flow2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -467,18 +471,5 @@
 
 
     </FrameLayout>
-
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:text="21-CS-77\n21-CS-29"
-        android:textColor="@color/white"
-        android:textSize="@dimen/_20ssp"
-        app:layout_constraintEnd_toEndOf="@id/frameLayout"
-        app:layout_constraintEnd_toStartOf="@+id/guideline3"
-        app:layout_constraintStart_toStartOf="@+id/frameLayout"
-        app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
